@@ -8,6 +8,7 @@
 
 1º Importar a base de dados
 -drop: pular ou deixar
+
     import pandas as pd
 
     tabela = pd.read_csv("cancelamentos_sample.csv")
@@ -27,4 +28,20 @@
   
 
     display(tabela.info())
+
+3º Análise Inicial dos cancelamentos
+-
+
+        
+
+
+
+
+
+
+
+
+
+
+
 
