@@ -1,0 +1,30 @@
+*Instenção VS Code (Jupyter)
+    Criar Arquivo(exemplocodigo.ipynb)
+
+
+*Instalar Bibliotecas
+    !pip install pandas openpyxl numpy ipykernel nbformat plotly
+
+
+1º Importar a base de dados
+-drop: pular ou deixar
+    import pandas as pd
+
+    tabela = pd.read_csv("cancelamentos_sample.csv")
+                                                                                            OUTRAS COLUNAS
+    tabela = tabela.drop(columns="CustomerID")         ->          //OU tabela = tabela.drop(columns=["CustomerID", "idade", "sexo"])
+
+    display(tabela)
+
+
+2º Tratamento de dados
+-dropna:descartar as linhas que possuem valor em branco.
+-fillna:substituir o vazio pelo valor informado em ().
+
+    display(tabela.info())
+                                                                   MUDAR O VALOR EM BRANCO
+    tabela = tabela.dropna()                       ->            #OU tabela = tabela.fillna(1)
+  
+
+    display(tabela.info())
+
