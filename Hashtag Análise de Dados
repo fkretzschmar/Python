@@ -52,7 +52,21 @@ for coluna in tabela.columns:
 #Exibe o grafico
     grafico.show()
 
-        
+
+*FILTROS
+
+#se eu resolver o call center, pra quanto cai o cancelamento?
+filtro = tabela["ligacoes_callcenter"]<=4
+tabela= tabela[filtro]
+
+#e o atraso?
+filtro = tabela["dias_atraso"]<=20
+tabela = tabela[filtro]
+
+#e o contrato mensal?
+filtro = tabela["duracao_contrato"]!="Monthly"
+
+display(tabela["cancelou"].value_counts(normalize=True))
 
         
 
