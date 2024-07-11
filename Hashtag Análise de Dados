@@ -30,7 +30,29 @@
     display(tabela.info())
 
 3º Análise Inicial dos cancelamentos
--
+-normalize:transforma o valor em %
+
+                                                                            VALOR EM %(FORMATAR NO FINAL DO PROJETO)
+        display(tabela["cancelou"]. value_counts())    ->        display(tabela["cancelou"]. value_counts(normalize=True).map("{:.2%}".format))
+
+
+
+4º Análise de causas do cancelamento dos clientes
+-plotly:biblioteca de graficos(plotly.com) para verificar os graficos da biblioteca vamos utilizar o grafico(histograms)
+
+
+import plotly.express as px
+
+
+coluna = "idade"
+for coluna in tabela.columns:
+#Cria o grafico
+    grafico = px.histogram(tabela, x=coluna, color="cancelou")
+
+#Exibe o grafico
+    grafico.show()
+
+        
 
         
 
