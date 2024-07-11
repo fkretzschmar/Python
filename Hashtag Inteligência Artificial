@@ -1,0 +1,12 @@
+!pip install pandas numpy scikit-learn
+
+#importar base de dados
+import pandas as pd
+
+tabela = pd.read_csv("clientes.csv")
+display(tabela)
+
+
+#analisar os tipos de dados
+display(tabela.info())
+
